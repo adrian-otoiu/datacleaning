@@ -52,9 +52,9 @@ featclean<- gsub("-", "_", featclean,fixed=TRUE)
    like tBodyAcc_MEAN_X.mean,MeanofTimeofBodyAccelerationMeanDimensionX, expecially when all numeric variables in the final data set are means of the original
    variables. A name like TimeofBodyAccelerationMeanDimensionX merely confuses the person working the with this data later on, since it cannot 
    fully capture its proper definition, which is needed for technical data of this kind in order to do the analysis and interpret the results (which are, after
-   all, the purposes for which data is cleaned.
+   all, the purposes for which data is cleaned).
 
-   I case one does not agree with me, section III) part 2) demonstrates that I can rename of variables, and that I used this feature to clean labels.
+   In case one does not agree with me, section III) part 2) demonstrates that I can rename of variables, and that I used this feature to clean labels.
    
    Hopefully this argues for my choice with respect to the “Appropriately labels the data set with descriptive variable names” requirement.I agree with "making 
    variables human readable" but I believe in this case they were pretty readable once one figured out the naming conventions of the authors.
