@@ -116,7 +116,7 @@ b<- c(a, featclean)
 
 colnames(alldata)<- b
 
-#select what is needed for computing mean and standard deviation
+##select mean and standard deviation variables 
 #/ part IV in README file
 
 alldata1<-alldata[,grep("MEAN", names(alldata), fixed=TRUE)]
