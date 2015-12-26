@@ -45,10 +45,19 @@ featclean<- gsub("-", "_", featclean,fixed=TRUE)
    These replacements get rid of the parentheses and the hyphen as their presence in variable names are not read properly by the summarization commands. 
    Also, capitalization helps select the right variables.
 
-3) Here I make a variable names vector and assign the proper variable names to the alldata file. (point 3 in the project requirements). I kept the labels 
-   from the labels file since I found them to be pretty straightforward and short enough, thus making good parsimonious names for rather technical
-   variables that take a bit to define and explain. The appropriate, extended definition of each label can be found in the codebook file. 
-   Hopefully this answers the “Appropriately labels the data set with descriptive variable names” requirement. 
+3) Here I make a variable names vector and assign the proper variable names to the alldata file. (point 4 in the project requirements). I kept most of the labels 
+   from the labels file since I found them to be pretty straightforward and short enough (human readable that is), thus making good parsimonious names for rather 
+   technical variables that take a bit to define and explain. The appropriate, extended definition of each label can be found in the codebook file, where, at the 
+   beginning, each part of the names (e.g. t stands for time, Acc for acceleration) is explained. For me it does not make sense to label a variable 
+   like tBodyAcc_MEAN_X.mean,MeanofTimeofBodyAccelerationMeanDimensionX, expecially when all numeric variables in the final data set are means of the original
+   variables. A name like TimeofBodyAccelerationMeanDimensionX merely confuses the person working the with this data later on, since it cannot 
+   fully capture its proper definition, which is needed for technical data of this kind in order to do the analysis and interpret the results (which are, after
+   all, the purposes for which data is cleaned.
+
+   I case one does not agree with me, section III) part 2) demonstrates that I can rename of variables, and that I used this feature to clean labels.
+   
+   Hopefully this argues for my choice with respect to the “Appropriately labels the data set with descriptive variable names” requirement.I agree with "making 
+   variables human readable" but I believe in this case they were pretty readable once one figured out the naming conventions of the authors.
 
 IV)  Here I select the MEAN and STD (standard deviation) variables from alldata and create a reduceddata set with the variables (required in the 
 point 2 of the project instructions). This dataset also contains the SubjectID and Activity variables. 
